@@ -1,0 +1,34 @@
+#Asks user for the number of floors in the hotel    
+floors = int(input("Floors in the hotel: "))
+#Occupied variable used for calculations
+occupied = 0
+#Unoccupied variable used for calculations
+unoccupied = 0
+#TotalRooms variable used for calculations
+totalRooms = 0
+#Constant used for calculations
+var = 0
+#For iteration in range of floors perform this loop
+for i in range(floors):
+    #Print for rooms on each floor
+    print("Rooms on Floor "+str(i+1)+": ", end='')
+    #Input for rooms on each floor
+    var = int(input())
+    #Comparison Operator
+    totalRooms += var
+    #Print rooms occupied
+    print("Rooms occupied: ", end='')
+    #Input for rooms occupied
+    var = int(input())
+    #Comparison Operator
+    occupied += var
+#Unoccupied rooms calculation
+unoccupied = totalRooms - occupied
+#Print total rooms
+print("Total rooms =",totalRooms)
+#Print occupied rooms
+print("Total occupied rooms =",occupied)
+#Print unoccupied rooms
+print("Total unoccupied rooms =",unoccupied)
+#Print then calculate % of rooms occupied
+print("Percentage of rooms that are occupied = ", int(occupied/totalRooms*100), "%", sep= '')
